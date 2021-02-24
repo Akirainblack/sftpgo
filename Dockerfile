@@ -58,6 +58,6 @@ RUN sed -i "s|\"users_base_dir\": \"\",|\"users_base_dir\": \"/srv/sftpgo/data\"
 RUN chown -R sftpgo:sftpgo /etc/sftpgo /srv/sftpgo && chown sftpgo:sftpgo /var/lib/sftpgo && chmod 700 /srv/sftpgo/backups
 
 WORKDIR /var/lib/sftpgo
-USER 1000:1000
+USER 1041:100
 
 CMD ["sftpgo", "serve"]
